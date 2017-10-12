@@ -1,6 +1,6 @@
 {
   "version": "1.0.1",
-  "author": "zhu.nn@qq.com ",
+  "author": "zhu.nn@qq.com",
   "scripts": {
     "start": "nodemon ./server/server.dev.js",
     "clean": "rimraf dist",
