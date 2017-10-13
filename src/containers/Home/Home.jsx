@@ -1,15 +1,37 @@
 import React from 'react'
 import './style.less'
+import { Link } from 'react-router-dom'
 
 export default class Home extends React.Component {
   render() {
-    const smile = require('Assets/img/smile.png')
+    // const smile = require('Assets/img/smile.png')
     return (
       <div className='container-home'>
-        <h1> welcome to demo <span className='smile'>:)</span></h1>
-        <img src={smile}/>
-        <h1>===:) </h1>
-        <input type='text' />
+
+        <ul className='app-wrap'>
+          <li>
+            <Link to="/count" >
+              <div className='app-icon'>
+                <svg className="icon" aria-hidden="true">
+                  <use xlinkHref="#icon-xitongjishuqi"></use>
+                </svg>
+              </div>
+              <p className='app-name'>
+                计数器
+              </p>
+            </Link>
+          </li>
+          <li>
+            <div className='app-icon'>
+              <svg className="icon" aria-hidden="true">
+                <use xlinkHref="#icon-todo"></use>
+              </svg>
+            </div>
+            <p className='app-name'>
+              todo
+            </p>
+          </li>
+        </ul>
       </div>
     )
   }

@@ -1,6 +1,32 @@
 .container-home {
+  overflow: hidden;
+  background-color: #BBFFFF;
+  >.app-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    >li {
+      text-align: center;
+      display: block;
+      width: 100px;
+      height: 124px;
+      // background-color: blue;
+      margin: 20px;
+      .app-icon {
+        .icon {
+          width: 100px;
+          height: 100px;
+        }
+      }
+      .app-name {
+        padding: 0;
+        margin: 0;
+        font-size: 18px;
+      }
+    }
+    
+  }
   > h1 {
     color: pink;
-    font-size: 200px;
+    font-size: 50px;
   }
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 import { observer, inject } from 'mobx-react'
+import './style.less'
 
 @inject(stores => ({
   count: stores.count.count,
@@ -13,22 +14,30 @@ export default class Counter extends React.Component {
   render() {
     return (
       <div className='container-counter'>
-        <h1> {this.props.count} </h1>
-        <button onClick={()=>{
-          this.props.increment()
-        }}>
-          increment
-        </button>
-        <button onClick={()=>{
-          this.props.decrement()
-        }}>
-        decrement
-        </button>
-        <button onClick={()=>{
-          this.props.setVal(0)
-        }}>
-        Reset
-        </button>
+        <div className='counter-wrap'>
+          <div className='count-result'>
+            <h1> {this.props.count} </h1>
+          </div>
+          <div className='count-option'>
+            <button className='big' onClick={()=>{
+              this.props.increment()
+            }}>
+              +
+            </button>
+            <div className='count-option-standby'>
+              <button onClick={()=>{
+                this.props.decrement()
+              }}>
+              -
+              </button>
+              <button onClick={()=>{
+                this.props.setVal(0)
+              }}>
+              Reset
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     )
   }
