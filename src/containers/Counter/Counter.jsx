@@ -10,7 +10,7 @@ import './style.less'
 }))
 
 @observer
-export default class Counter extends React.Component {
+export default class CounterContainer extends React.Component {
   render() {
     return (
       <div className='container-counter'>

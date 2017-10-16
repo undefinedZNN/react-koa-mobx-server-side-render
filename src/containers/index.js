@@ -5,8 +5,11 @@ import './style.less'
 // 导入页面组件
 import Home from './Home/Home.jsx'
 import Counter from './Counter/Counter.jsx'
-
+import RouterDemo from './RouterDemo/RouterDemo.jsx'
+import NotFoundPage from './NotFoundPage/NotFoundPage.jsx'
 export {
   Home,
-  Counter
+  Counter,
+  RouterDemo,
+  NotFoundPage
 }
