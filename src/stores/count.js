@@ -2,10 +2,10 @@ import { action, observable } from 'mobx'
 
 class Count {
   @observable
-  count = 10
+  count = 0
 
   @observable
-  oldVal = 2
+  oldVal = 0
 
   @action
   increment() {

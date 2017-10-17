@@ -1,13 +1,24 @@
 import React from 'react'
+import { Route } from 'react-router-dom'
+
+const Status = ({ code, children }) => (
+  <Route render={({ staticContext }) => {
+    if (staticContext) {
+      staticContext.status = code
+    }
+    return children
+  }}/>
+)
 
 export default class NotFoundPageContainer extends React.Component {
   render() {
-    console.log('4000000000000000004', this.props.match)
     return (
-      <h1 code={404}>
-        :( 404 <br/>
-        当前URL:{this.props.match.url}
-      </h1>
+      <Status code={404}>
+        <h1>
+          :( 404 <br/>
+          当前URL:{this.props.match.url}
+        </h1>
+      </Status>
     )
   }
 }

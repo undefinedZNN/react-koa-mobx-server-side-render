@@ -5,38 +5,19 @@ import {
   RouterDemo,
   NotFoundPage
 } from 'Containers'
+
+import { RedirectWithStatus } from 'Components'
+
 export default class AppRoute extends React.Component {
   render() {
     return (
       <Switch>
         <Route exact path="/app/count" component={Counter}/>
-        <Route exact path="/app/routerDemo" component={RouterDemo}/>
-        <Route path='*' component={NotFoundPage}/>
+        <Route path="/app/routerDemo" component={RouterDemo}/>
+        {/** 路由组中想定义404页面请末尾加上18,19行代码 **/}
+        <Route path='/404' component={NotFoundPage}/>
+        <RedirectWithStatus status={404} from="*" to="/404" />
       </Switch>
     )
   }
 }
-
-// export default [
-//   {
-//     path: '/',
-//     component: LinkHead,
-//     routes: [
-//       {
-//         path: '/',
-//         exact: true,
-//         component: Home
-//       },
-//       {
-//         path: '/count',
-//         exact: true,
-//         component: Counter
-//       },
-//       {
-//         path: '/routerDemo',
-//         exact: true,
-//         component: RouterDemo
-//       }
-//     ]
-//   }
-// ]

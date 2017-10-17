@@ -50,6 +50,10 @@ const client = {
     chunkFilename: 'chunk.[name].js',
     publicPath: '/'
   },
+  // externals: {
+  //   react: 'React',
+  //   'react-dom': 'ReactDOM'
+  // },
   module: {
     rules: [
       {
