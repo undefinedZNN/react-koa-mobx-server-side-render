@@ -3,7 +3,8 @@ import { Route, Switch } from 'react-router-dom'
 import {
   Counter,
   RouterDemo,
-  NotFoundPage
+  NotFoundPage,
+  Md5
 } from 'Containers'
 
 import { RedirectWithStatus } from 'Components'
@@ -14,6 +15,7 @@ export default class AppRoute extends React.Component {
       <Switch>
         <Route exact path="/app/count" component={Counter}/>
         <Route path="/app/routerDemo" component={RouterDemo}/>
+        <Route path="/app/md5" component={Md5}/>
         {/** 路由组中想定义404页面请末尾加上18,19行代码 **/}
         <Route path='/404' component={NotFoundPage}/>
         <RedirectWithStatus status={404} from="*" to="/404" />

@@ -1,9 +1,9 @@
 # react-koa-mobx-server-side-render
 react+koa+mobx server-side render
 
-最近一段时间在研究服务端渲染, 所以写了个demo分享出来,
-文档后续我再补充
+演示地址: (http://www.zhunn.top:9001/)
 
+项目中我写了几个demo可以参考
 ### 目录结构
 
 ```bash

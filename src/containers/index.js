@@ -7,9 +7,12 @@ import Home from './Home/Home.jsx'
 import Counter from './Counter/Counter.jsx'
 import RouterDemo from './RouterDemo/RouterDemo.jsx'
 import NotFoundPage from './NotFoundPage/NotFoundPage.jsx'
+import Md5 from './Md5/Md5.jsx'
+
 export {
   Home,
   Counter,
   RouterDemo,
-  NotFoundPage
+  NotFoundPage,
+  Md5
 }

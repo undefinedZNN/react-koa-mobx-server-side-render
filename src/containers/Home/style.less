@@ -1,6 +1,9 @@
 .container-home {
   overflow: hidden;
-  background-color: #BBFFFF;
+  width: 100%;
+  height: 100%;
+  background: #a3d3e1 url('~Assets/img/app-bg.jpg') no-repeat fixed top;
+  background-size:cover;
   >.app-wrap {
     display: flex;
     flex-wrap: wrap;
@@ -9,18 +12,22 @@
       display: block;
       width: 100px;
       height: 124px;
-      // background-color: blue;
       margin: 20px;
+      a {
+        text-decoration:none;
+      }
       .app-icon {
         .icon {
           width: 100px;
           height: 100px;
+          color: #29b6f6;
         }
       }
       .app-name {
         padding: 0;
         margin: 0;
         font-size: 18px;
+        color: white;
       }
     }
     

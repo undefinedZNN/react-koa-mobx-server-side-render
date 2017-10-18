@@ -14,7 +14,7 @@ const postcssOpts = {
     autoprefixer({
       browsers: ['last 2 versions', 'Firefox ESR', '> 1%', 'ie >= 8', 'iOS >= 8', 'Android >= 4'],
     }),
-    pxtorem({ rootValue: 100, propWhiteList: [] })
+    // pxtorem({ rootValue: 100, propWhiteList: [] })
   ],
 }
 
@@ -35,7 +35,8 @@ const webpackResolve = {
 const client = {
   name: 'client',
   // 控制编译生成代码类型
-  devtool: 'eval-source-map',
+  devtool: 'source-map',
+  // devtool: 'eval-source-map',
   // 项目基础目录
   context: resolve(__dirname, '..'),
   entry: [
@@ -44,9 +45,13 @@ const client = {
   ],
   output: {
     path: resolve(__dirname, '../dist/client'),
-    filename: '[name].js',
+    filename: '[name].[hash:7].js',
     chunkFilename: 'chunk.[name].js',
     publicPath: '/'
+  },
+  externals: {
+    react: 'React',
+    'react-dom': 'ReactDOM'
   },
   module: {
     rules: [

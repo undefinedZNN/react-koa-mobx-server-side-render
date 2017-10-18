@@ -25,7 +25,7 @@ export default class Home extends React.Component {
             <Link to="/app/routerDemo" >
               <div className='app-icon'>
                 <svg className="icon" aria-hidden="true">
-                  <use xlinkHref="#icon-xitongjishuqi"></use>
+                  <use xlinkHref="#icon-router"></use>
                 </svg>
               </div>
               <p className='app-name'>
@@ -34,14 +34,16 @@ export default class Home extends React.Component {
             </Link>
           </li>
           <li>
-            <div className='app-icon'>
-              <svg className="icon" aria-hidden="true">
-                <use xlinkHref="#icon-todo"></use>
-              </svg>
-            </div>
-            <p className='app-name'>
-              todo
-            </p>
+            <Link to="/app/md5" >
+              <div className='app-icon'>
+                <svg className="icon" aria-hidden="true">
+                  <use xlinkHref="#icon-jiami"></use>
+                </svg>
+              </div>
+              <p className='app-name'>
+                MD5
+              </p>
+            </Link>
           </li>
         </ul>
       </div>
