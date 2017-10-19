@@ -1,9 +1,8 @@
 # react-koa-mobx-server-side-render
 react+koa+mobx server-side render
 
-演示地址: (http://www.zhunn.top:9001/)
+演示地址: (http://rsrd.zhunn.top/)
 
-项目中我写了几个demo可以参考
 ### 目录结构
 
 ```bash
@@ -56,6 +55,14 @@ npm run build
 ```bash
 npm run prod
 ```
+### 技术栈
+
+webpack,
+koa,
+react,
+react-route,
+mobx,
+bodymovin
 
 ### License
 

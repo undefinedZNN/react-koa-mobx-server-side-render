@@ -106,7 +106,7 @@ const client = {
   },
   resolve: webpackResolve,
   plugins: [
-    new ExtractTextPlugin('styles.css'),
+    new ExtractTextPlugin('styles.[hash:7].css'),
     new HtmlWebpackPlugin({
       filename: resolve(__dirname, '../dist/template/index.html'),
       template: resolve(__dirname, '../template/index.html')
