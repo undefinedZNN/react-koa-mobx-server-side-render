@@ -45,6 +45,18 @@ export default class Home extends React.Component {
               </p>
             </Link>
           </li>
+          <li>
+            <Link to="/app/bodymovin" >
+              <div className='app-icon'>
+                <svg className="icon" aria-hidden="true">
+                  <use xlinkHref="#icon-donghuachahuasheji"></use>
+                </svg>
+              </div>
+              <p className='app-name'>
+                bodymovin
+              </p>
+            </Link>
+          </li>
         </ul>
       </div>
     )

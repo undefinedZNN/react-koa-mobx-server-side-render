@@ -31,7 +31,6 @@ export default class Md5Container extends React.Component {
           <h3>MD5 加密</h3>
           <div className='md5-input-wrap'>
             <input type='text' onChange={this.plaintextChange} />
-            <button>加密</button>
           </div>
           <div className='md5-result'>
             <p>16位 小写: {this.state.ciphertext16}</p>
