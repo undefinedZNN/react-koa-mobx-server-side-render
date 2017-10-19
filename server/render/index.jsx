@@ -8,7 +8,10 @@ import serialize from 'serialize-javascript'
 
 /**  react 服务端渲染路由绑定 end **/
 export default async (ctx, next) => {
-  const routerContext = {}
+  const routerContext = {
+    status: 200,
+    seoInfo: { title: '', keywords: '', description: '' }
+  }
   // 渲染页面
   let html = renderToString(
     <Provider {...stores}>    
@@ -29,7 +32,13 @@ export default async (ctx, next) => {
   }
   await ctx.render(
     'index',
-    { root: html, stores: serialize(stores) }
+    { 
+      root: html,
+      stores: serialize(stores),
+      title: routerContext.seoInfo.title,
+      keywords: routerContext.seoInfo.keywords,
+      description: routerContext.seoInfo.description
+    }
   )
   return next()
 }
